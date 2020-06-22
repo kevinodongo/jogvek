@@ -4,16 +4,45 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="icon" href="<%= BASE_URL %>favicon-16x16.png">
+    <title>Jogvek Group Limited</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
+    <div id="app">
+      <div class="spinner"></div>
+    </div>
+    <style>
+      .spinner {
+        width: 40px;
+        height: 40px;
+        background-color: rgb(252, 126, 9);
+        margin: 300px auto;
+        -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+        animation: sk-rotateplane 1.2s infinite ease-in-out;
+      }
+
+      @-webkit-keyframes sk-rotateplane {
+        0% { -webkit-transform: perspective(120px) }
+        50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+        100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+      }
+
+      @keyframes sk-rotateplane {
+         0% { 
+         transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+      } 50% { 
+         transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+         -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+      } 100% { 
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+      }
+      }
+    </style>
     <!-- built files will be auto injected -->
   </body>
 </html>

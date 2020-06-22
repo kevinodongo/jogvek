@@ -1,24 +1,28 @@
 <template>
   <div class="toolbar">
     <v-app-bar app>
-      <v-container grid-list-xs>
-        <v-card-actions>
-          <div class="headline font-weight-bold d-none d-sm-flex">
-            JOGVEK GROUP LIMITED
-          </div>
-          <div class="title font-weight-bold d-flex d-sm-none">
-            JOGVEK GROUP LIMITED
-          </div>
-          <v-spacer></v-spacer>
-          <v-btn text to="/" class="d-none d-md-flex">home</v-btn>
-          <v-btn text to="/about-cloud" class="d-none d-md-flex">about</v-btn>
-          <v-btn text to="/products" class="d-none d-md-flex">products</v-btn>
-          <v-btn text to="/contact" class="d-none d-md-flex">contact</v-btn>
-          <v-btn class="d-flex d-md-none" @click="expand = !expand" icon>
-            <v-icon>mdi-menu</v-icon>
-          </v-btn>
-        </v-card-actions>
-      </v-container>
+      <v-col class="d-none d-md-flex" cols="1"></v-col>
+      <img
+        class="d-flex d-sm-none"
+        src="https://i.imgur.com/cYduz2v.png"
+        alt="logo"
+        height="65"
+      />
+      <img
+        class="d-none d-sm-flex"
+        src="https://i.imgur.com/cYduz2v.png"
+        alt="logo"
+        height="100"
+      />
+      <v-spacer></v-spacer>
+      <v-btn text to="/" class="d-none d-md-flex">home</v-btn>
+      <v-btn text to="/about-cloud" class="d-none d-md-flex">about</v-btn>
+      <v-btn text to="/products" class="d-none d-md-flex">products</v-btn>
+      <v-btn text to="/contact" class="d-none d-md-flex">contact</v-btn>
+      <v-btn class="d-flex d-md-none" @click="expand = !expand" icon>
+        <v-icon>mdi-menu</v-icon>
+      </v-btn>
+      <v-col class="d-none d-md-flex" cols="1"></v-col>
     </v-app-bar>
     <v-expand-transition>
       <v-card v-show="expand" width="100%" class="mx-auto">
