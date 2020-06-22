@@ -1,10 +1,10 @@
 <template>
   <div class="bottom">
-    <v-sheet min-height="600" color="#CFD8DC">
+    <v-sheet min-height="500" color="#CFD8DC">
       <v-container grid-list-xs>
         <v-row no-gutters justify="center">
           <v-col cols="12" md="6">
-            <v-sheet height="550" color="#CFD8DC">
+            <v-sheet height="500" color="#CFD8DC">
               <v-row class="fill-height" align="center">
                 <v-col>
                   <div class="information-line">
@@ -31,10 +31,10 @@
             </v-sheet>
           </v-col>
           <v-col cols="12" md="6">
-            <v-sheet height="550" color="#CFD8DC">
+            <v-sheet height="450" color="#CFD8DC">
               <v-img
                 src="https://i.imgur.com/jnVYHxH.png"
-                height="550"
+                height="450"
                 contain
                 gradient="to top, rgba(207, 216, 220,.92), rgba(207, 216, 220,.92)"
               >

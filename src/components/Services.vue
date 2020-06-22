@@ -13,7 +13,7 @@
           <span class="orange--text">highly-tailored IT solutions.</span>
         </div>
         <v-row>
-          <v-col cols="12" md="4">
+          <v-col cols="12" sm="6" md="4">
             <v-card min-height="350">
               <v-sheet height="150" color="#ECEFF1">
                 <v-row justify="center" class="fill-height" align="center">
@@ -40,7 +40,7 @@
               </v-card-text>
             </v-card>
           </v-col>
-          <v-col cols="12" md="4">
+          <v-col cols="12" sm="6" md="4">
             <v-card min-height="350">
               <v-sheet height="150" color="#ECEFF1">
                 <v-row justify="center" class="fill-height" align="center">
@@ -67,7 +67,7 @@
               </v-card-text>
             </v-card>
           </v-col>
-          <v-col cols="12" md="4">
+          <v-col cols="12" sm="6" md="4">
             <v-card min-height="350">
               <v-sheet height="150" color="#ECEFF1">
                 <v-row justify="center" class="fill-height" align="center">
@@ -96,9 +96,7 @@
               </v-card-text>
             </v-card>
           </v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="12" md="4">
+          <v-col cols="12" sm="6" md="4">
             <v-card min-height="350">
               <v-sheet height="150" color="#ECEFF1">
                 <v-row justify="center" class="fill-height" align="center">
@@ -110,10 +108,10 @@
                   Cloud Security
                 </div>
                 <div class="text-center mt-2 mb-2">
-                  Cloud security refers to a broad set of policies,
-                  technologies, applications, and controls utilized to protect
-                  virtualized IP, data, applications, services, and the
-                  associated infrastructure of cloud computing
+                  This refers to a broad set of policies, technologies,
+                  applications, and controls utilized to protect virtualized IP,
+                  data, applications, services, and the associated
+                  infrastructure of cloud computing
                 </div>
                 <div class="text-center">
                   <v-btn text color="orange" to="/contact">
@@ -128,7 +126,7 @@
               </v-card-text>
             </v-card>
           </v-col>
-          <v-col cols="12" md="4">
+          <v-col cols="12" sm="6" md="4">
             <v-card min-height="350">
               <v-sheet height="150" color="#ECEFF1">
                 <v-row justify="center" class="fill-height" align="center">
@@ -138,9 +136,9 @@
               <v-card-text>
                 <div class="text-center headline">Web and Mobile Apps</div>
                 <div class="text-center mt-2 mb-2">
-                  A web application is an application software that runs on a
-                  web server, unlike computer-based software programs that are
-                  stored locally on the Operating System of the device.
+                  A web & mobile application is an application software that
+                  runs on a web server, unlike computer-based software programs
+                  that are stored locally on the Operating System of the device.
                 </div>
                 <div class="text-center">
                   <v-btn text color="orange" to="/contact">
@@ -155,7 +153,7 @@
               </v-card-text>
             </v-card>
           </v-col>
-          <v-col cols="12" md="4">
+          <v-col cols="12" sm="6" md="4">
             <v-card min-height="350">
               <v-sheet height="150" color="#ECEFF1">
                 <v-row justify="center" class="fill-height" align="center">
@@ -185,13 +183,12 @@
           </v-col>
         </v-row>
         <div class="text-center service-btn">
-          <v-btn text to="/contact">
-            <span
-              class="service-text black--text"
-              style="text-transform: capitalize"
-              >Challenges are just opportunities in disguise</span
-            ><span class="challenge primary--text">Take the challenge!</span>
-          </v-btn>
+          <span
+            class="service-text black--text mr-2"
+            style="text-transform: capitalize"
+            >Challenges are just opportunities in disguise</span
+          >
+          <router-link to="/contact">Take the challenge!</router-link>
         </div>
       </v-container>
     </v-sheet>
@@ -215,5 +212,6 @@
   text-decoration: underline;
   text-transform: capitalize;
   font-size: 16px;
+  font-weight: 300;
 }
 </style>

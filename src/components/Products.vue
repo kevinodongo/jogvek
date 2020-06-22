@@ -54,191 +54,219 @@
             </div>
           </v-alert>
           <v-row>
-            <v-col cols="12" md="3">
-              <v-card>
-                <v-img src="https://i.imgur.com/hzY5Ou4.png" contain></v-img>
-                <v-card-text>
-                  <div class="text-center title font-weight-regular mb-3">
-                    COVID
-                  </div>
-                  <div style="text-align: justify">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
-                    delectus odio ullam illum cupiditate maxime. Optio dolores
-                    nulla nesciunt maxime a esse deserunt ipsa? Reprehenderit
-                    quis tenetur distinctio esse perspiciatis.
-                  </div>
-                  <div class="text-center mt-2">
-                    <v-btn color="orange" text>
-                      <span style="text-transform: capitalize"
-                        >read more <v-icon small>mdi-arrow-right</v-icon></span
+            <v-col cols="12" sm="6" md="3">
+              <v-hover v-slot:default="{ hover }" open-delay="200">
+                <v-card :elevation="hover ? 24 : 2" class="mx-auto">
+                  <v-img src="https://i.imgur.com/hzY5Ou4.png" contain>
+                    <v-expand-transition>
+                      <div
+                        v-if="hover"
+                        class="d-flex transition-fast-in-fast-out orange v-card--reveal display-3 white--text"
+                        style="height: 100%;"
                       >
-                    </v-btn>
-                  </div>
-                </v-card-text>
-              </v-card>
+                        <v-row
+                          class="fill-height"
+                          align="center"
+                          justify="center"
+                        >
+                          <v-btn text>
+                            <span style="text-transform: capitalize"
+                              >Covid</span
+                            >
+                          </v-btn>
+                        </v-row>
+                      </div>
+                    </v-expand-transition>
+                  </v-img>
+                </v-card>
+              </v-hover>
             </v-col>
-            <v-col cols="12" md="3">
-              <v-card>
-                <v-img src="https://i.imgur.com/Olzhd5B.jpg" contain></v-img>
-                <v-card-text>
-                  <div class="text-center title font-weight-regular mb-3">
-                    AGRICULTURE
-                  </div>
-                  <div style="text-align: justify">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
-                    delectus odio ullam illum cupiditate maxime. Optio dolores
-                    nulla nesciunt maxime a esse deserunt ipsa? Reprehenderit
-                    quis tenetur distinctio esse perspiciatis.
-                  </div>
-                  <div class="text-center mt-2">
-                    <v-btn color="orange" text>
-                      <span style="text-transform: capitalize"
-                        >read more <v-icon small>mdi-arrow-right</v-icon></span
+            <v-col cols="12" sm="6" md="3">
+              <v-hover v-slot:default="{ hover }" open-delay="200">
+                <v-card :elevation="hover ? 24 : 2" class="mx-auto">
+                  <v-img src="https://i.imgur.com/Olzhd5B.jpg" contain>
+                    <v-expand-transition>
+                      <div
+                        v-if="hover"
+                        class="d-flex transition-fast-in-fast-out orange v-card--reveal display-3 white--text"
+                        style="height: 100%;"
                       >
-                    </v-btn>
-                  </div>
-                </v-card-text>
-              </v-card>
+                        <v-row
+                          class="fill-height"
+                          align="center"
+                          justify="center"
+                        >
+                          <v-btn text>
+                            <span style="text-transform: capitalize"
+                              >Agriculture</span
+                            >
+                          </v-btn>
+                        </v-row>
+                      </div>
+                    </v-expand-transition>
+                  </v-img>
+                </v-card>
+              </v-hover>
             </v-col>
-            <v-col cols="12" md="3">
-              <v-card>
-                <v-img src="https://i.imgur.com/8dNJbDj.jpg" contain></v-img>
-                <v-card-text>
-                  <div class="text-center title font-weight-regular mb-3">
-                    WOMEN
-                  </div>
-                  <div style="text-align: justify">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
-                    delectus odio ullam illum cupiditate maxime. Optio dolores
-                    nulla nesciunt maxime a esse deserunt ipsa? Reprehenderit
-                    quis tenetur distinctio esse perspiciatis.
-                  </div>
-                  <div class="text-center mt-2">
-                    <v-btn color="orange" text>
-                      <span style="text-transform: capitalize"
-                        >read more <v-icon small>mdi-arrow-right</v-icon></span
+            <v-col cols="12" sm="6" md="3">
+              <v-hover v-slot:default="{ hover }" open-delay="200">
+                <v-card :elevation="hover ? 24 : 2" class="mx-auto">
+                  <v-img src="https://i.imgur.com/8dNJbDj.jpg" contain>
+                    <v-expand-transition>
+                      <div
+                        v-if="hover"
+                        class="d-flex transition-fast-in-fast-out orange v-card--reveal display-3 white--text"
+                        style="height: 100%;"
                       >
-                    </v-btn>
-                  </div>
-                </v-card-text>
-              </v-card>
+                        <v-row
+                          class="fill-height"
+                          align="center"
+                          justify="center"
+                        >
+                          <v-btn text>
+                            <span style="text-transform: capitalize"
+                              >Women</span
+                            >
+                          </v-btn>
+                        </v-row>
+                      </div>
+                    </v-expand-transition>
+                  </v-img>
+                </v-card>
+              </v-hover>
             </v-col>
-            <v-col cols="12" md="3">
-              <v-card>
-                <v-img src="https://i.imgur.com/g5hdsNr.jpg" contain></v-img>
-                <v-card-text>
-                  <div class="text-center title font-weight-regular mb-3">
-                    SME
-                  </div>
-                  <div style="text-align: justify">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
-                    delectus odio ullam illum cupiditate maxime. Optio dolores
-                    nulla nesciunt maxime a esse deserunt ipsa? Reprehenderit
-                    quis tenetur distinctio esse perspiciatis.
-                  </div>
-                  <div class="text-center mt-2">
-                    <v-btn color="orange" text>
-                      <span style="text-transform: capitalize"
-                        >read more <v-icon small>mdi-arrow-right</v-icon></span
+            <v-col cols="12" sm="6" md="3">
+              <v-hover v-slot:default="{ hover }" open-delay="200">
+                <v-card :elevation="hover ? 24 : 2" class="mx-auto">
+                  <v-img src="https://i.imgur.com/g5hdsNr.jpg" contain>
+                    <v-expand-transition>
+                      <div
+                        v-if="hover"
+                        class="d-flex transition-fast-in-fast-out orange v-card--reveal display-3 white--text"
+                        style="height: 100%;"
                       >
-                    </v-btn>
-                  </div>
-                </v-card-text>
-              </v-card>
+                        <v-row
+                          class="fill-height"
+                          align="center"
+                          justify="center"
+                        >
+                          <v-btn text>
+                            <span style="text-transform: capitalize">SME</span>
+                          </v-btn>
+                        </v-row>
+                      </div>
+                    </v-expand-transition>
+                  </v-img>
+                </v-card>
+              </v-hover>
             </v-col>
-          </v-row>
-          <v-row>
-            <v-col cols="12" md="3">
-              <v-card>
-                <v-img src="https://i.imgur.com/Q0Fug00.jpg" contain></v-img>
-                <v-card-text>
-                  <div class="text-center title font-weight-regular mb-3">
-                    TECHNOLOGY
-                  </div>
-                  <div style="text-align: justify">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
-                    delectus odio ullam illum cupiditate maxime. Optio dolores
-                    nulla nesciunt maxime a esse deserunt ipsa? Reprehenderit
-                    quis tenetur distinctio esse perspiciatis.
-                  </div>
-                  <div class="text-center mt-2">
-                    <v-btn color="orange" text>
-                      <span style="text-transform: capitalize"
-                        >read more <v-icon small>mdi-arrow-right</v-icon></span
+            <v-col cols="12" sm="6" md="3">
+              <v-hover v-slot:default="{ hover }" open-delay="200">
+                <v-card :elevation="hover ? 24 : 2" class="mx-auto">
+                  <v-img src="https://i.imgur.com/Q0Fug00.jpg" contain>
+                    <v-expand-transition>
+                      <div
+                        v-if="hover"
+                        class="d-flex transition-fast-in-fast-out orange v-card--reveal display-3 white--text"
+                        style="height: 100%;"
                       >
-                    </v-btn>
-                  </div>
-                </v-card-text>
-              </v-card>
+                        <v-row
+                          class="fill-height"
+                          align="center"
+                          justify="center"
+                        >
+                          <v-btn text>
+                            <span style="text-transform: capitalize"
+                              >Technology</span
+                            >
+                          </v-btn>
+                        </v-row>
+                      </div>
+                    </v-expand-transition>
+                  </v-img>
+                </v-card>
+              </v-hover>
             </v-col>
-            <v-col cols="12" md="3">
-              <v-card>
-                <v-img src="https://i.imgur.com/L4XpSuC.jpg" contain></v-img>
-                <v-card-text>
-                  <div class="text-center title font-weight-regular mb-3">
-                    GOVERANCE
-                  </div>
-                  <div style="text-align: justify">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
-                    delectus odio ullam illum cupiditate maxime. Optio dolores
-                    nulla nesciunt maxime a esse deserunt ipsa? Reprehenderit
-                    quis tenetur distinctio esse perspiciatis.
-                  </div>
-                  <div class="text-center mt-2">
-                    <v-btn color="orange" text>
-                      <span style="text-transform: capitalize"
-                        >read more <v-icon small>mdi-arrow-right</v-icon></span
+            <v-col cols="12" sm="6" md="3">
+              <v-hover v-slot:default="{ hover }" open-delay="200">
+                <v-card :elevation="hover ? 24 : 2" class="mx-auto">
+                  <v-img src="https://i.imgur.com/L4XpSuC.jpg" contain>
+                    <v-expand-transition>
+                      <div
+                        v-if="hover"
+                        class="d-flex transition-fast-in-fast-out orange v-card--reveal display-3 white--text"
+                        style="height: 100%;"
                       >
-                    </v-btn>
-                  </div>
-                </v-card-text>
-              </v-card>
+                        <v-row
+                          class="fill-height"
+                          align="center"
+                          justify="center"
+                        >
+                          <v-btn text>
+                            <span style="text-transform: capitalize"
+                              >Goverance</span
+                            >
+                          </v-btn>
+                        </v-row>
+                      </div>
+                    </v-expand-transition>
+                  </v-img>
+                </v-card>
+              </v-hover>
             </v-col>
-            <v-col cols="12" md="3">
-              <v-card>
-                <v-img src="https://i.imgur.com/xtxDJa8.jpg" contain></v-img>
-                <v-card-text>
-                  <div class="text-center title font-weight-regular mb-3">
-                    CHILDREN
-                  </div>
-                  <div style="text-align: justify">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
-                    delectus odio ullam illum cupiditate maxime. Optio dolores
-                    nulla nesciunt maxime a esse deserunt ipsa? Reprehenderit
-                    quis tenetur distinctio esse perspiciatis.
-                  </div>
-                  <div class="text-center mt-2">
-                    <v-btn color="orange" text>
-                      <span style="text-transform: capitalize"
-                        >read more <v-icon small>mdi-arrow-right</v-icon></span
+            <v-col cols="12" sm="6" md="3">
+              <v-hover v-slot:default="{ hover }" open-delay="200">
+                <v-card :elevation="hover ? 24 : 2" class="mx-auto">
+                  <v-img src="https://i.imgur.com/xtxDJa8.jpg" contain>
+                    <v-expand-transition>
+                      <div
+                        v-if="hover"
+                        class="d-flex transition-fast-in-fast-out orange v-card--reveal display-3 white--text"
+                        style="height: 100%;"
                       >
-                    </v-btn>
-                  </div>
-                </v-card-text>
-              </v-card>
+                        <v-row
+                          class="fill-height"
+                          align="center"
+                          justify="center"
+                        >
+                          <v-btn text>
+                            <span style="text-transform: capitalize"
+                              >Children</span
+                            >
+                          </v-btn>
+                        </v-row>
+                      </div>
+                    </v-expand-transition>
+                  </v-img>
+                </v-card>
+              </v-hover>
             </v-col>
-            <v-col cols="12" md="3">
-              <v-card>
-                <v-img src="https://i.imgur.com/SY89EAg.jpg" contain></v-img>
-                <v-card-text>
-                  <div class="text-center title font-weight-regular mb-3">
-                    TOURISIM
-                  </div>
-                  <div style="text-align: justify">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
-                    delectus odio ullam illum cupiditate maxime. Optio dolores
-                    nulla nesciunt maxime a esse deserunt ipsa? Reprehenderit
-                    quis tenetur distinctio esse perspiciatis.
-                  </div>
-                  <div class="text-center mt-2">
-                    <v-btn color="orange" text>
-                      <span style="text-transform: capitalize"
-                        >read more <v-icon small>mdi-arrow-right</v-icon></span
+            <v-col cols="12" sm="6" md="3">
+              <v-hover v-slot:default="{ hover }" open-delay="200">
+                <v-card :elevation="hover ? 24 : 2" class="mx-auto">
+                  <v-img src="https://i.imgur.com/DTuhNNN.jpg" contain>
+                    <v-expand-transition>
+                      <div
+                        v-if="hover"
+                        class="d-flex transition-fast-in-fast-out orange v-card--reveal display-3 white--text"
+                        style="height: 100%;"
                       >
-                    </v-btn>
-                  </div>
-                </v-card-text>
-              </v-card>
+                        <v-row
+                          class="fill-height"
+                          align="center"
+                          justify="center"
+                        >
+                          <v-btn text>
+                            <span style="text-transform: capitalize"
+                              >Health</span
+                            >
+                          </v-btn>
+                        </v-row>
+                      </div>
+                    </v-expand-transition>
+                  </v-img>
+                </v-card>
+              </v-hover>
             </v-col>
           </v-row>
         </v-sheet>

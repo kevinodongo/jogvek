@@ -141,35 +141,35 @@
             leading market share
           </div>
           <v-row class="mt-5">
-            <v-col cols="12" md="3">
-              <v-card height="100" color="white">
+            <v-col cols="12" sm="6" lg="3">
+              <v-card color="white" flat>
                 <v-img
                   src="https://i.imgur.com/pG5nQpo.png"
-                  height="100"
+                  height="120"
                 ></v-img>
               </v-card>
             </v-col>
-            <v-col cols="12" md="3">
-              <v-card height="100" color="white">
+            <v-col cols="12" sm="6" lg="3">
+              <v-card color="white" flat>
                 <v-img
                   src="https://i.imgur.com/Dcun2FV.jpg"
-                  height="100"
+                  height="120"
                 ></v-img>
               </v-card>
             </v-col>
-            <v-col cols="12" md="3">
-              <v-card height="100" color="white">
+            <v-col cols="12" sm="6" lg="3">
+              <v-card color="white" flat>
                 <v-img
                   src="https://i.imgur.com/dQDKrY8.png"
-                  height="90"
+                  height="120"
                 ></v-img>
               </v-card>
             </v-col>
-            <v-col cols="12" md="3">
-              <v-card height="100" color="white">
+            <v-col cols="12" sm="6" lg="3">
+              <v-card color="white" flat>
                 <v-img
                   src="https://i.imgur.com/7xAOyrq.jpg"
-                  height="80"
+                  height="100"
                 ></v-img>
               </v-card>
             </v-col>
