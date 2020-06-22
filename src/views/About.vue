@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <Toolbar />
-    <v-sheet height="50"></v-sheet>
+    <v-sheet height="30"></v-sheet>
     <v-container grid-list-xs>
       <v-row class="about">
         <v-col cols="12" md="3">
@@ -48,9 +48,3 @@ export default {
   }
 };
 </script>
-
-<style lang="css">
-.about {
-  margin-bottom: 50px;
-}
-</style>

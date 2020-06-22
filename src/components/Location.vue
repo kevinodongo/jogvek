@@ -127,7 +127,4 @@ export default {
 .home {
   color: rgb(197, 217, 231);
 }
-.location {
-  margin-bottom: 50px;
-}
 </style>

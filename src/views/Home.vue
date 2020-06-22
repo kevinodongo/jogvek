@@ -12,7 +12,7 @@
     </v-btn>
     <Toolbar />
     <v-img
-      height="700"
+      height="670"
       src="https://i.imgur.com/e79U9Io.jpg"
       alt="home-logo"
       gradient="to top, rgba(0,0,0,.44), rgba(0,0,0,.44)"
@@ -31,7 +31,7 @@
         </v-container>
       </div>
       <v-divider></v-divider>
-      <div style="margin-top: 150px;">
+      <div style="margin-top: 100px;">
         <v-row justify="center">
           <v-col cols="11" md="8">
             <div class="display-3 font-weight-black text-center white--text">
@@ -45,23 +45,14 @@
             <div class="headline text-center mt-3 white--text">
               Cloud Computing Solutions Designed For Your Business
             </div>
-            <v-row justify="center" class="mt-10">
-              <v-col cols="12" sm="3">
-                <v-btn block color="white" large class="mr-3"
-                  ><span class="orange--text" style="text-transform: capitalize"
-                    >Free Consultation</span
-                  ></v-btn
-                >
-              </v-col>
-              <v-col cols="12" sm="3">
-                <v-btn block dark color="orange" large
-                  ><v-icon>mdi-menu-right</v-icon
-                  ><span style="text-transform: capitalize"
-                    >how we work</span
-                  ></v-btn
-                >
-              </v-col>
-            </v-row>
+            <div class="text-center mt-10">
+              <v-btn color="white" large
+                ><v-icon color="orange">mdi-menu-right</v-icon
+                ><span class="orange--text" style="text-transform: capitalize"
+                  >Free Consultation</span
+                ></v-btn
+              >
+            </div>
           </v-col>
         </v-row>
       </div>
