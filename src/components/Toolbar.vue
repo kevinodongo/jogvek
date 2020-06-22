@@ -1,30 +1,20 @@
 <template>
   <div class="toolbar">
-    <v-app-bar app color="white">
+    <v-app-bar app>
       <v-container grid-list-xs>
         <v-card-actions>
-          <div class="headline font-weight-bold d-none d-sm-flex black--text">
+          <div class="headline font-weight-bold d-none d-sm-flex">
             JOGVEK GROUP LIMITED
           </div>
-          <div class="title font-weight-bold d-flex d-sm-none black--text">
+          <div class="title font-weight-bold d-flex d-sm-none">
             JOGVEK GROUP LIMITED
           </div>
           <v-spacer></v-spacer>
-          <v-btn text to="/" class="d-none d-md-flex black--text">home</v-btn>
-          <v-btn text to="/about-cloud" class="d-none d-md-flex black--text"
-            >about</v-btn
-          >
-          <v-btn text to="/products" class="d-none d-md-flex black--text"
-            >products</v-btn
-          >
-          <v-btn text to="/contact" class="d-none d-md-flex black--text"
-            >contact</v-btn
-          >
-          <v-btn
-            class="d-flex d-md-none black--text"
-            @click="expand = !expand"
-            icon
-          >
+          <v-btn text to="/" class="d-none d-md-flex">home</v-btn>
+          <v-btn text to="/about-cloud" class="d-none d-md-flex">about</v-btn>
+          <v-btn text to="/products" class="d-none d-md-flex">products</v-btn>
+          <v-btn text to="/contact" class="d-none d-md-flex">contact</v-btn>
+          <v-btn class="d-flex d-md-none" @click="expand = !expand" icon>
             <v-icon>mdi-menu</v-icon>
           </v-btn>
         </v-card-actions>

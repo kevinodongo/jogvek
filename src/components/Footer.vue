@@ -8,10 +8,11 @@
             <div class="line mt-2"></div>
             <div class="mt-4 mb-2 title">JOGVEK GROUP LIMITED</div>
             <div style="text-align: justify" class="grey--text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-              possimus dolores recusandae illum dolore eveniet at molestias?
-              Iusto accusantium eligendi voluptatum sed, dolorem hic ipsam
-              asperiores. Quidem neque illum reprehenderit!
+              Biggest Business Challenge in today's technology-driven world is
+              cost, Cloud Computing is the best remedy for this challenge. We
+              assist companies and startup to architect best deisgn's to achieve
+              the five pillars of AWS - operational excellence, security,
+              reliability, performance efficiency, and cost optimization
             </div>
           </v-col>
           <v-col cols="12" md="4">
@@ -20,35 +21,43 @@
             <v-row no-gutters>
               <v-col cols="6">
                 <div class="mt-4 grey--text">
-                  <v-icon>mdi-chevron-double-right</v-icon> Cloud Computing
+                  <v-icon class="mr-2">mdi-chevron-double-right</v-icon>Cloud
+                  Computing
                 </div>
                 <div class="grey--text">
-                  <v-icon>mdi-chevron-double-right</v-icon>IT Support
+                  <v-icon class="mr-2">mdi-chevron-double-right</v-icon>IT
+                  Support
                 </div>
                 <div class="grey--text">
-                  <v-icon>mdi-chevron-double-right</v-icon>IT Consultancy
+                  <v-icon class="mr-2">mdi-chevron-double-right</v-icon>IT
+                  Consultancy
                 </div>
                 <div class="grey--text">
-                  <v-icon>mdi-chevron-double-right</v-icon>Web Design and
-                  Development
+                  <v-icon class="mr-2">mdi-chevron-double-right</v-icon> Cloud
+                  Security
                 </div>
                 <div class="grey--text">
-                  <v-icon>mdi-chevron-double-right</v-icon>Cyber Security
+                  <v-icon class="mr-2">mdi-chevron-double-right</v-icon>Web
+                  Design and Development
+                </div>
+                <div class="grey--text">
+                  <v-icon class="mr-2">mdi-chevron-double-right</v-icon>Disaster
+                  Management
                 </div>
               </v-col>
               <v-col cols="6">
                 <div class="mt-4 grey--text">
-                  <v-icon>mdi-chevron-double-right</v-icon>Graphics
+                  <v-icon class="mr-2">mdi-chevron-double-right</v-icon>Graphics
                 </div>
                 <div class="grey--text">
-                  <v-icon>mdi-chevron-double-right</v-icon>Designs
+                  <v-icon class="mr-2">mdi-chevron-double-right</v-icon>Designs
                 </div>
                 <div class="grey--text">
-                  <v-icon>mdi-chevron-double-right</v-icon>Privacy
+                  <v-icon class="mr-2">mdi-chevron-double-right</v-icon>Privacy
                 </div>
 
                 <div class="grey--text">
-                  <v-icon>mdi-chevron-double-right</v-icon>Contacts
+                  <v-icon class="mr-2">mdi-chevron-double-right</v-icon>Contacts
                 </div>
               </v-col>
             </v-row>
@@ -84,9 +93,9 @@
     <v-footer padless dark absolute>
       <v-card class="flex" flat tile color="black">
         <v-container grid-list-xs>
-          <div class="white--text text-end">
+          <div class="white--text text-end font-weight-light">
             Copyright &copy; {{ new Date().getFullYear() }} —
-            <strong>Jogvek group limited</strong>
+            <strong>Jogvek Group Limited</strong>
           </div>
         </v-container>
       </v-card>

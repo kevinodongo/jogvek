@@ -13,7 +13,7 @@
           <div class="mt-5 mb-5 body-1">
             This is an example of a serveless architecture in AWS
           </div>
-          <v-img src="https://i.imgur.com/y8pzdgW.png" contain></v-img>
+          <v-img src="https://i.imgur.com/X4HsTO1.png" contain></v-img>
           <div class="mt-5 font-weight-light body-1">
             When you operate and maintain the servers and operating systems (OS)
             that run your organization’s applications, your system

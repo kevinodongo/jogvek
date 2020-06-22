@@ -51,7 +51,13 @@
                     </div>
                     <div class="grey--text">based on your needs.</div>
                     <div class="mt-4">
-                      <v-btn fab small elevation="0" color="grey"
+                      <v-btn
+                        target="blank"
+                        href="https://www.google.co.ke/maps/place/Nyaku+House/@-1.2953342,36.7966721,17z/data=!3m1!4b1!4m5!3m4!1s0x182f10be1cd0bc33:0x6733974af7e19a5c!8m2!3d-1.2953342!4d36.7988608?hl=en"
+                        fab
+                        small
+                        elevation="0"
+                        color="grey"
                         ><v-icon small>mdi-map-marker</v-icon></v-btn
                       ><span class="primary--text ml-3">
                         View on Google map</span

@@ -1,5 +1,5 @@
 <template>
-  <div class="message">
+  <div class="location">
     <Toolbar />
     <v-sheet color="#ECEFF1">
       <v-container grid-list-xs>
@@ -128,7 +128,6 @@ export default {
   color: rgb(197, 217, 231);
 }
 .location {
-  margin-top: 50px;
   margin-bottom: 50px;
 }
 </style>

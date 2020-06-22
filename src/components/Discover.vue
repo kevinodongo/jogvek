@@ -30,7 +30,7 @@
             >
           </v-col>
         </v-row>
-        <v-row v-if="mission">
+        <v-row v-if="mission" style="margin-bottom: 50px;">
           <v-col cols="12" md="6">
             <v-sheet>
               <video width="100%" autoplay muted>
@@ -71,11 +71,17 @@
                 </div>
                 <div class="grey--text">
                   <v-icon color="orange" class="mr-3">mdi-check-all</v-icon
-                  >Cyber Security
+                  >Disaster Recovery
                 </div>
-                <div class="orange--text mt-5">
-                  Let's get started
-                  <v-icon color="orange" small>mdi-arrow-right</v-icon>
+                <div class="mt-10">
+                  <v-btn color="orange" to="/contact" text>
+                    <span style="text-transform: capitalize"
+                      >Let's get started</span
+                    >
+                    <v-icon color="orange" small class="ml-1"
+                      >mdi-arrow-right-bold-outline</v-icon
+                    >
+                  </v-btn>
                 </div>
               </v-col>
             </v-row>
@@ -84,64 +90,78 @@
         <v-row v-if="service" style="margin-bottom: 100px">
           <v-row>
             <v-col cols="12" md="4">
-              <v-img src="https://i.imgur.com/L1OQ2Tt.jpg" contain width="100%">
+              <v-img
+                src="https://i.imgur.com/ETBdey8.jpg"
+                contain
+                alt="quality-image"
+              >
               </v-img>
-              <div class="headline font-weight-bold text-center mt-10 mb-3">
+              <div class="headline font-weight-regular text-center mt-10 mb-3">
                 Quality Assurance System
               </div>
-              <div class="text-center">
+              <div class="text-center font-weight-light body-1">
                 At Jogvek Group, we have a holistic and intergrated approach
                 towards core modernization to experience technological
                 evolution.
               </div>
               <div class="text-center">
-                <v-btn text color="orange" class="mt-10 mb-10">
+                <v-btn text color="orange" to="/contact" class="mt-10 mb-10">
                   <span style="text-transform: capitalize"
                     >Discover now
-                    <v-icon color="orange" small>mdi-arrow-right</v-icon></span
-                  >
-                </v-btn>
-              </div>
-            </v-col>
-            <v-col cols="12" md="4">
-              <v-img src="https://i.imgur.com/vo5IUYH.jpg" contain width="100%">
-              </v-img>
-              <div class="headline font-weight-bold text-center  mt-10 mb-3">
-                High Professional Staff
-              </div>
-              <div class="text-center">
-                Our staff having obtained the official & formal training in IT
-                technology and technical fields, our staff know best.
-              </div>
-              <div class="text-center">
-                <v-btn text color="orange" class="mt-10 mb-10">
-                  <span style="text-transform: capitalize"
-                    >Discover now
-                    <v-icon color="orange" small>mdi-arrow-right</v-icon></span
+                    <v-icon color="orange" small
+                      >mdi-arrow-right-bold-outline</v-icon
+                    ></span
                   >
                 </v-btn>
               </div>
             </v-col>
             <v-col cols="12" md="4">
               <v-img
-                src="https://i.imgur.com/ltYWhta.jpg"
-                contain=""
-                width="100%"
+                src="https://i.imgur.com/nwp4rv8.jpg"
+                contain
+                alt="staff-image"
               >
               </v-img>
-              <div class="headline font-weight-bold text-center mt-10 mb-3">
-                Info Security Management
+              <div class="headline font-weight-regular text-center  mt-10 mb-3">
+                High Professional Staff
+              </div>
+              <div class="text-center font-weight-light body-1">
+                Our staff having obtained the official & formal training in IT
+                technology and technical fields, our staff know best.
               </div>
               <div class="text-center">
+                <v-btn text color="orange" to="/contact" class="mt-10 mb-10">
+                  <span style="text-transform: capitalize"
+                    >Discover now
+                    <v-icon color="orange" small
+                      >mdi-arrow-right-bold-outline</v-icon
+                    ></span
+                  >
+                </v-btn>
+              </div>
+            </v-col>
+            <v-col cols="12" md="4">
+              <v-img
+                src="https://i.imgur.com/Hu4iCd8.jpg"
+                contain
+                alt="info-security"
+              >
+              </v-img>
+              <div class="headline font-weight-regular text-center mt-10 mb-3">
+                Info Security Management
+              </div>
+              <div class="text-center font-weight-light body-1">
                 Our technical staff have a flair for developing
                 <strong>clean-coded-websites</strong> based on customers' needs
                 global guidelines and trends
               </div>
               <div class="text-center">
-                <v-btn text color="orange" class="mt-10 mb-10">
+                <v-btn text color="orange" to="/contact" class="mt-10 mb-10">
                   <span style="text-transform: capitalize"
                     >Discover now
-                    <v-icon color="orange" small>mdi-arrow-right</v-icon></span
+                    <v-icon color="orange" small
+                      >mdi-arrow-right-bold-outline</v-icon
+                    ></span
                   >
                 </v-btn>
               </div>

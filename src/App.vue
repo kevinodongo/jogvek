@@ -80,7 +80,7 @@
           <div>
             <v-tooltip left>
               <template v-slot:activator="{ on, attrs }">
-                <v-btn icon v-bind="attrs" v-on="on"
+                <v-btn to="/products" icon v-bind="attrs" v-on="on"
                   ><v-icon>mdi-share-variant</v-icon></v-btn
                 >
               </template>

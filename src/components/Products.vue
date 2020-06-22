@@ -29,18 +29,28 @@
       <v-container grid-list-xs>
         <v-sheet>
           <v-alert color="orange" class="black--text mb-10">
-            <div>PRODUCTS</div>
-            <div>
+            <div class="font-weight-bold" style="text-decoration: underline">
+              PRODUCTS
+            </div>
+            <div class="body-1 mt-3 font-weight-light">
+              Biggest Business Challenge in today's technology-driven world is
+              cost, Cloud Computing is the best remedy for this challenge. We
+              assist companies and startup to architect best deisgn's to achieve
+              the five pillars of AWS - operational excellence, security,
+              reliability, performance efficiency, and cost optimization
+            </div>
+            <div class="mt-2 body-1 font-weight-light">
               We seek solutions to the world’s great inequities at the frontiers
-              of science, technology, and innovation.
+              of science, technology, and innovation. Our mission is to find new
+              way's and create applications that can bring impact and changes to
+              human life.
             </div>
-            <div>
-              Our mission is to find new way's and create applications that can
-              bring impact and changes to human life.
-            </div>
-            <div>
-              We are encouranging cloud computing because it reduces cost and
-              brings efficiency to small businesses.
+            <div class="mt-3 font-weight-bold">NOTE</div>
+            <div class="font-weight-light mt-3">
+              Some of our application's are on production while some are
+              samples, Our main agenda is to build application's which can
+              assist companies, ease our day to day activities and bring impact
+              to human well being.
             </div>
           </v-alert>
           <v-row>

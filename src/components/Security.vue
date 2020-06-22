@@ -12,7 +12,7 @@
             can be configured to the exact needs of the business.
           </div>
           <video width="100%" autoplay muted>
-            <source src="/Security - 2176.mp4" type="video/mp4" />
+            <source src="/Pexels Videos 1738594.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div class="mt-5 font-weight-light body-1">

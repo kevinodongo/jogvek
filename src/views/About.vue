@@ -1,6 +1,7 @@
 <template>
   <div class="about">
     <Toolbar />
+    <v-sheet height="50"></v-sheet>
     <v-container grid-list-xs>
       <v-row class="about">
         <v-col cols="12" md="3">
@@ -50,7 +51,6 @@ export default {
 
 <style lang="css">
 .about {
-  margin-top: 50px;
   margin-bottom: 50px;
 }
 </style>

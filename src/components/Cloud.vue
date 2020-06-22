@@ -13,15 +13,9 @@
           </div>
           <v-img
             class="mt-7 mb-5"
-            src="https://i.imgur.com/P15ASMu.png"
-            contain
+            src="https://i.imgur.com/USNLgdA.jpg"
+            height="400"
           ></v-img>
-          <a
-            href="https://www.youtube.com/watch?v=dH0yz-Osy54"
-            target="blank"
-            style="font-size: 16px"
-            >Click To Learn More About Cloud Computing</a
-          >
           <div class="font-weight-bold body-1" style="margin-top: 50px">
             Who uses cloud computing services and why?
           </div>
@@ -150,8 +144,8 @@
             <v-col cols="12" md="3">
               <v-card height="100" color="white">
                 <v-img
-                  src="https://i.imgur.com/ZTx4maK.png"
-                  height="85"
+                  src="https://i.imgur.com/pG5nQpo.png"
+                  height="100"
                 ></v-img>
               </v-card>
             </v-col>

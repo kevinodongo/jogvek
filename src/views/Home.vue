@@ -10,69 +10,39 @@
     >
       <v-icon class="white--text">mdi-chevron-up</v-icon>
     </v-btn>
-    <v-app-bar app color="grey darken-1" flat>
-      <v-container grid-list-xs>
-        <v-card-actions>
-          <div class="headline font-weight-bold d-none d-sm-flex">
-            JOGVEK GROUP LIMITED
-          </div>
-          <div class="title font-weight-bold d-flex d-sm-none">
-            JOGVEK GROUP LIMITED
-          </div>
-          <v-spacer></v-spacer>
-          <v-btn text to="/" class="d-none d-md-flex">home</v-btn>
-          <v-btn text to="/about-cloud" class="d-none d-md-flex">about</v-btn>
-          <v-btn text to="/products" class="d-none d-md-flex">products</v-btn>
-          <v-btn text to="/contact" class="d-none d-md-flex">contact</v-btn>
-          <v-btn class="d-flex d-md-none" @click="expand = !expand" icon>
-            <v-icon>mdi-menu</v-icon>
-          </v-btn>
-        </v-card-actions>
-      </v-container>
-    </v-app-bar>
-    <v-expand-transition>
-      <v-card v-show="expand" width="100%" class="mx-auto">
-        <v-list>
-          <v-list-item to="/" active-class="orange--text">
-            <v-list-item-title>Home</v-list-item-title>
-          </v-list-item>
-          <v-list-item to="about-cloud" active-class="orange--text">
-            <v-list-item-title>About</v-list-item-title>
-          </v-list-item>
-          <v-list-item to="/products" active-class="orange--text">
-            <v-list-item-title>Products</v-list-item-title>
-          </v-list-item>
-          <v-list-item to="/contact" active-class="orange--text">
-            <v-list-item-title>Contact</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-card>
-    </v-expand-transition>
-    <v-img height="850" src="https://i.imgur.com/LpKFb0g.jpg">
+    <Toolbar />
+    <v-img
+      height="700"
+      src="https://i.imgur.com/e79U9Io.jpg"
+      alt="home-logo"
+      gradient="to top, rgba(0,0,0,.44), rgba(0,0,0,.44)"
+    >
       <div class="contact d-none d-sm-flex">
         <v-container grid-list-xs>
           <v-card-actions class="pa-2">
             <v-spacer></v-spacer>
             <v-icon small class="ml-2">mdi-phone</v-icon>
-            <div class="ml-2 caption">+254 725 999 157</div>
+            <div class="ml-2 caption font-weight-bold">+254 725 999 157</div>
             <v-icon small class="ml-2">mdi-email</v-icon>
-            <div class="caption ml-2">jogvek@aol.com</div>
+            <div class="caption ml-2 font-weight-bold">jogvek@aol.com</div>
             <v-icon small class="ml-2 mr-2">mdi-clock-outline</v-icon>
-            <div class="caption">Mon-Fri 7.00 - 5.00</div>
+            <div class="caption font-weight-bold">Mon-Fri 7.00 - 5.00</div>
           </v-card-actions>
         </v-container>
       </div>
       <v-divider></v-divider>
-      <div style="margin-top: 100px;">
+      <div style="margin-top: 150px;">
         <v-row justify="center">
           <v-col cols="11" md="8">
-            <div class="display-3 font-weight-black text-center">
+            <div class="display-3 font-weight-black text-center white--text">
               <span>ONE COMPANY</span>
             </div>
-            <div class="display-3 font-weight-black mt-2 text-center">
+            <div
+              class="display-3 font-weight-black mt-2 text-center white--text"
+            >
               <span>INFINITE POTENTIAL</span>
             </div>
-            <div class="headline text-center mt-3">
+            <div class="headline text-center mt-3 white--text">
               Cloud Computing Solutions Designed For Your Business
             </div>
             <v-row justify="center" class="mt-10">
@@ -100,6 +70,7 @@
     <v-img
       src="https://i.imgur.com/jnVYHxH.png"
       contain=""
+      alt="service-image"
       height="400"
       gradient="to top, rgba(128, 128, 128,.92), rgba(128, 128, 128,.92)"
     >
@@ -114,7 +85,7 @@
           <v-col cols="12" md="4">
             <v-row>
               <v-col cols="6">
-                <v-btn color="white" x-large block
+                <v-btn to="/contact" color="white" x-large block
                   ><v-icon small color="primary"
                     >mdi-comment-processing-outline</v-icon
                   >
@@ -126,7 +97,7 @@
                 >
               </v-col>
               <v-col cols="6">
-                <v-btn color="orange" dark x-large block
+                <v-btn to="/about-cloud" color="orange" dark x-large block
                   ><v-icon class="mr-2" small>mdi-information-outline</v-icon>
                   <span style="text-transform: capitalize" class="caption"
                     >get info</span
@@ -149,8 +120,9 @@ import Footer from "../components/Footer";
 import Contact from "../components/Contact";
 import Services from "../components/Services";
 import Discover from "../components/Discover";
+import Toolbar from "../components/Toolbar";
 export default {
-  components: { Footer, Contact, Services, Discover },
+  components: { Toolbar, Footer, Contact, Services, Discover },
   data() {
     return {
       loading: true,
