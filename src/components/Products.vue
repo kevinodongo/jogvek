@@ -31,14 +31,16 @@
           <v-alert color="orange" class="black--text mb-10">
             <div>PRODUCTS</div>
             <div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Distinctio aliquid unde fugit sint cupiditate, eaque reiciendis
-              eum voluptates similique nesciunt atque qui at consequatur dolore
-              sed delectus voluptas excepturi fugiat. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Distinctio aliquid unde fugit sint
-              cupiditate, eaque reiciendis eum voluptates similique nesciunt
-              atque qui at consequatur dolore sed delectus voluptas excepturi
-              fugiat.
+              We seek solutions to the world’s great inequities at the frontiers
+              of science, technology, and innovation.
+            </div>
+            <div>
+              Our mission is to find new way's and create applications that can
+              bring impact and changes to human life.
+            </div>
+            <div>
+              We are encouranging cloud computing because it reduces cost and
+              brings efficiency to small businesses.
             </div>
           </v-alert>
           <v-row>
