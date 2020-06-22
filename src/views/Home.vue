@@ -36,10 +36,10 @@
           <v-list-item to="/" active-class="orange--text">
             <v-list-item-title>Home</v-list-item-title>
           </v-list-item>
-          <v-list-item active-class="orange--text">
+          <v-list-item to="about-cloud" active-class="orange--text">
             <v-list-item-title>About</v-list-item-title>
           </v-list-item>
-          <v-list-item active-class="orange--text">
+          <v-list-item to="/products" active-class="orange--text">
             <v-list-item-title>Products</v-list-item-title>
           </v-list-item>
           <v-list-item to="/contact" active-class="orange--text">
@@ -48,7 +48,7 @@
         </v-list>
       </v-card>
     </v-expand-transition>
-    <v-img height="850" src="https://i.imgur.com/n6CzWiq.jpg">
+    <v-img height="850" src="https://i.imgur.com/LpKFb0g.jpg">
       <div class="contact d-none d-sm-flex">
         <v-container grid-list-xs>
           <v-card-actions class="pa-2">
