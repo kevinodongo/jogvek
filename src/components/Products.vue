@@ -28,7 +28,7 @@
     <v-sheet class="product">
       <v-container grid-list-xs>
         <v-sheet>
-          <v-alert color="orange" outlined class="black--text mb-10">
+          <v-alert type="info" color="orange" class="black--text mb-10">
             <div class="font-weight-bold" style="text-decoration: underline">
               PRODUCTS
             </div>
