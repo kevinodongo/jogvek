@@ -104,7 +104,7 @@
                     Quality Assurance System
                   </div>
                   <div class="text-center font-weight-light body-1">
-                    At Jogvek Group, we have a holistic and intergrated approach
+                    At Jogevk Group, we have a holistic and intergrated approach
                     towards core modernization to experience technological
                     evolution.
                   </div>

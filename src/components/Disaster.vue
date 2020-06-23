@@ -51,7 +51,7 @@
             Benefits of using AWS and CloudEndure for Disaster Recovery
           </div>
           <div class="mt-5 font-weight-light body-1">
-            AWS and CloudEndure for Disaster Recoveryoffer numerous benefits to
+            AWS and CloudEndure for Disaster Recovery offer numerous benefits to
             include:
           </div>
           <div class="mt-5 font-weight-light body-1">

@@ -8,7 +8,7 @@
               <v-col cols="11">
                 <div class="headline font-weight-bold">ABOUT US</div>
                 <div class="line mt-2"></div>
-                <div class="mt-4 mb-2 title">JOGVEK GROUP LIMITED</div>
+                <div class="mt-4 mb-2 title">JOGEVK GROUP LIMITED</div>
                 <div style="text-align: justify" class="grey--text">
                   Biggest Business Challenge in today's technology-driven world
                   is cost, Cloud Computing is the best remedy for this
@@ -87,7 +87,7 @@
                   <strong>Phone:</strong> +254 725 999157
                 </div>
                 <div class="grey--text">
-                  <strong>E-mail:</strong> jogvek@aol.com
+                  <strong>E-mail:</strong> jogevk@aol.com
                 </div>
                 <div class="mt-3">
                   <v-btn fab x-small elevation="0" tile class="mr-1"
@@ -112,7 +112,7 @@
         <v-container grid-list-xs>
           <div class="white--text text-end font-weight-light">
             Copyright &copy; {{ new Date().getFullYear() }} —
-            <strong>Jogvek Group Limited</strong>
+            <strong>Jogevk Group Limited</strong>
           </div>
         </v-container>
       </v-card>

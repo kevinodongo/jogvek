@@ -137,8 +137,7 @@
             Different Cloud Providers
           </div>
           <div class="mt-5 font-weight-light body-1">
-            There are several cloud providers here's just a few who have a
-            leading market share
+            Here are some of the leading cloud providers
           </div>
           <v-row class="mt-5">
             <v-col cols="12" sm="6" lg="3">

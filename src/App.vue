@@ -66,6 +66,16 @@
         </v-card-actions>
       </div>
     </v-card>
+    <!--Button Scroll Up-->
+    <v-btn
+      id="myBtn"
+      onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;event.preventDefault()"
+      x-small
+      height="40"
+      color="orange"
+    >
+      <v-icon class="white--text">mdi-chevron-up</v-icon>
+    </v-btn>
     <v-main>
       <v-sheet :dark="dark">
         <v-sheet id="btn">
@@ -112,6 +122,28 @@ export default {
       showup: false,
       showdown: true
     };
+  },
+  mounted() {
+    this.scrollButton();
+  },
+  methods: {
+    scrollButton() {
+      var mybutton = document.getElementById("myBtn");
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {
+        scrollFunction();
+      };
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+    }
   }
 };
 </script>
@@ -127,6 +159,13 @@ export default {
   position: fixed;
   bottom: 0px;
   right: 60px;
+  z-index: 99;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
   z-index: 99;
 }
 </style>

@@ -54,7 +54,7 @@ const routes = [
     component: () => import("../components/404.vue")
   },
   // otherwise
-  { path: "*", redirect: "/" }
+  { path: "*", redirect: "/404" }
 ];
 
 export default routes;

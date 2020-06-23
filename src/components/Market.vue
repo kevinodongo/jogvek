@@ -74,7 +74,7 @@
             <v-icon class="mr-3" color="orange">mdi-menu-right</v-icon>Affiliate
             Marketing
           </div>
-          <v-sheet class="mt-5" color="#EEEEEE">
+          <v-sheet class="mt-10" color="#EEEEEE">
             <v-card-text class="body-1 black--text">
               <v-icon color="black">mdi-format-quote-open</v-icon>
               Digital marketing is the marketing of the future. In addition to

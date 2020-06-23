@@ -31,7 +31,7 @@
           <v-col cols="12" md="4">
             <div class="headline">CALL US</div>
             <div class="mt-7 font-weight-light" style="text-align: justify">
-              Welcome to Jogvek Group Limited, Reach out to us and discover how
+              Welcome to Jogevk Group Limited, Reach out to us and discover how
               working with us will help you realize your full potential, reduce
               operation costs and enhance your business outlook.
             </div>
@@ -43,7 +43,7 @@
               <v-icon class="mr-3">mdi-phone</v-icon> Phone: (+254) 725 999157
             </div>
             <div class="mt-3 font-weight-light">
-              <v-icon class="mr-3">mdi-email</v-icon> E-mail: jogvek@aol.com
+              <v-icon class="mr-3">mdi-email</v-icon> E-mail: jogevk@aol.com
             </div>
           </v-col>
           <v-col cols="12" md="8">

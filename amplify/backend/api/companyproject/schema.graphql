@@ -1,0 +1,9 @@
+type Contact @model {
+  id: ID!
+  name: String!
+  email: String
+  phone: String
+  subject: String
+  createdAt: String
+  updatedAt: String
+}

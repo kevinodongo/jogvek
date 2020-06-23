@@ -1,15 +1,5 @@
 <template>
   <div class="home">
-    <!--Button Scroll Up-->
-    <v-btn
-      id="myBtn"
-      onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;event.preventDefault()"
-      x-small
-      height="40"
-      color="orange"
-    >
-      <v-icon class="white--text">mdi-chevron-up</v-icon>
-    </v-btn>
     <Toolbar />
     <v-img
       height="670"
@@ -24,7 +14,7 @@
             <v-icon small class="ml-2">mdi-phone</v-icon>
             <div class="ml-2 caption font-weight-bold">+254 725 999 157</div>
             <v-icon small class="ml-2">mdi-email</v-icon>
-            <div class="caption ml-2 font-weight-bold">jogvek@aol.com</div>
+            <div class="caption ml-2 font-weight-bold">jogevk@aol.com</div>
             <v-icon small class="ml-2 mr-2">mdi-clock-outline</v-icon>
             <div class="caption font-weight-bold">Mon-Fri 7.00 - 5.00</div>
           </v-card-actions>
@@ -46,7 +36,7 @@
               Cloud Computing Solutions Designed For Your Business
             </div>
             <div class="text-center mt-10">
-              <v-btn color="white" large
+              <v-btn to="/contact" color="white" large
                 ><v-icon color="orange">mdi-menu-right</v-icon
                 ><span class="orange--text" style="text-transform: capitalize"
                   >Free Consultation</span
@@ -130,28 +120,6 @@ export default {
       ],
       expand: false
     };
-  },
-  mounted() {
-    this.scrollButton();
-  },
-  methods: {
-    scrollButton() {
-      var mybutton = document.getElementById("myBtn");
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function() {
-        scrollFunction();
-      };
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 100 ||
-          document.documentElement.scrollTop > 100
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-    }
   }
 };
 </script>
@@ -171,12 +139,5 @@ export default {
   font-size: 40px;
   font-weight: bolder;
   color: white;
-}
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  z-index: 99;
 }
 </style>
