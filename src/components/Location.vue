@@ -170,7 +170,7 @@ export default {
   components: { Toolbar, Footer },
   data() {
     return {
-      alert: true,
+      alert: false,
       valid: true,
       email: "",
       emailRules: [

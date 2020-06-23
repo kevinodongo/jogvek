@@ -15,14 +15,37 @@
         height="100"
       />
       <v-spacer></v-spacer>
-      <v-btn text to="/" class="d-none d-md-flex black--text">home</v-btn>
-      <v-btn text to="/about-cloud" class="d-none d-md-flex black--text"
+      <v-btn
+        text
+        to="/"
+        tile
+        class="d-none d-md-flex black--text"
+        active-class="orange--text"
+      >
+        home
+      </v-btn>
+      <v-btn
+        tile
+        active-class="orange--text"
+        text
+        to="/about-cloud"
+        class="d-none d-md-flex black--text"
         >about</v-btn
       >
-      <v-btn text to="/products" class="d-none d-md-flex black--text"
+      <v-btn
+        tile
+        active-class="orange--text"
+        text
+        to="/products"
+        class="d-none d-md-flex black--text"
         >products</v-btn
       >
-      <v-btn text to="/contact" class="d-none d-md-flex black--text"
+      <v-btn
+        tile
+        active-class="orange--text"
+        text
+        to="/contact"
+        class="d-none d-md-flex black--text"
         >contact</v-btn
       >
       <v-btn
