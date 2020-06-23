@@ -1,6 +1,11 @@
 <template>
   <div class="location">
     <Toolbar />
+    <v-progress-linear
+      :active="loading"
+      :indeterminate="loading"
+      color="orange"
+    ></v-progress-linear>
     <v-sheet color="#ECEFF1">
       <v-container grid-list-xs>
         <v-row>
@@ -27,6 +32,24 @@
     </v-sheet>
     <v-sheet class="location">
       <v-container grid-list-xs>
+        <div v-if="alert">
+          <v-alert
+            outlined
+            class="mt-10"
+            dense
+            type="info"
+            color="orange"
+            dismissible
+            :timeout="timeout"
+          >
+            <div class="font-weight-bold caption">JOGEVK GROUP LIMITED</div>
+            <div class="font-weight-regular caption">
+              Thank you for the inquiry, we will respond back as soon as
+              possible. In order to best serve your support inquiry, please call
+              (+254) 725 999157.
+            </div>
+          </v-alert>
+        </div>
         <v-row class="mt-10">
           <v-col cols="12" md="4">
             <div class="headline">CALL US</div>
@@ -48,50 +71,77 @@
           </v-col>
           <v-col cols="12" md="8">
             <div class="headline">GET IN TOUCH WITH US</div>
-            <v-row class="mt-6" no-gutters>
-              <v-col cols="12">
-                <div class="font-weight-bold caption mb-2">Name *</div>
-                <v-text-field
-                  background-color="#F5F5F5"
-                  name="name"
-                  single-line
-                  outlined
-                  dense
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12">
-                <div class="font-weight-bold caption mb-2">Email *</div>
-                <v-text-field
-                  background-color="#F5F5F5"
-                  name="email"
-                  single-line
-                  outlined
-                  dense
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12">
-                <div class="font-weight-bold caption mb-2">Phone Number *</div>
-                <v-text-field
-                  background-color="#F5F5F5"
-                  name="phone"
-                  single-line
-                  outlined
-                  dense
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12">
-                <div class="font-weight-bold caption mb-2">Subject *</div>
-                <v-textarea
-                  background-color="#F5F5F5"
-                  single-line
-                  outlined
-                  name="input-7-4"
-                ></v-textarea>
-              </v-col>
-              <v-col cols="12" md="4">
-                <v-btn color="orange" dark large block>send message</v-btn>
-              </v-col>
-            </v-row>
+            <v-form ref="form" v-model="valid" lazy-validation>
+              <v-row class="mt-6" no-gutters>
+                <v-col cols="12">
+                  <div class="font-weight-bold caption mb-2">Name *</div>
+                  <v-text-field
+                    name="name"
+                    v-model="name"
+                    :rules="nameRules"
+                    required
+                    outlined
+                    single-line
+                    dense
+                    hint="Complete the required field"
+                    persistent-hint
+                    background-color="grey lighten-2"
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12">
+                  <div class="font-weight-bold caption mb-2">Email *</div>
+                  <v-text-field
+                    name="email"
+                    v-model="email"
+                    :rules="emailRules"
+                    required
+                    outlined
+                    single-line
+                    dense
+                    background-color="grey lighten-2"
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12">
+                  <div class="font-weight-bold caption mb-2">
+                    Phone Number *
+                  </div>
+                  <v-text-field
+                    name="phone"
+                    v-model="phone"
+                    :rules="phoneRules"
+                    required
+                    outlined
+                    single-line
+                    dense
+                    background-color="grey lighten-2"
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12">
+                  <div class="font-weight-bold caption mb-2">Subject *</div>
+                  <v-textarea
+                    v-model="subject"
+                    :rules="subjectRules"
+                    required
+                    background-color="grey lighten-2"
+                    single-line
+                    outlined
+                    name="input-7-4"
+                  ></v-textarea>
+                </v-col>
+                <v-col cols="12" md="4">
+                  <v-btn
+                    @click="submit"
+                    :loading="loading"
+                    color="orange"
+                    dark
+                    large
+                    block
+                    class="mb-10"
+                    >send message</v-btn
+                  >
+                </v-col>
+              </v-row>
+            </v-form>
           </v-col>
         </v-row>
       </v-container>
@@ -113,12 +163,60 @@
 <script>
 import Toolbar from "../components/Toolbar";
 import Footer from "../components/Footer";
+import { API, graphqlOperation } from "aws-amplify";
+import { uuid } from "vue-uuid";
+import { createContact } from "../graphql/mutations";
 export default {
   components: { Toolbar, Footer },
   data() {
     return {
-      //
+      alert: true,
+      valid: true,
+      email: "",
+      emailRules: [
+        v => !!v || "E-mail is required",
+        v => /.+@.+\..+/.test(v) || "E-mail must be valid"
+      ],
+      name: "",
+      nameRules: [v => !!v || "Name is required"],
+      subject: "",
+      subjectRules: [v => !!v || "Subject is required"],
+      phone: "",
+      phoneRules: [v => !!v || "Phone is required"],
+      loading: false,
+      loader: null,
+      timeout: 3000
     };
+  },
+  watch: {
+    loader() {
+      const l = this.loader;
+      this[l] = !this[l];
+      setTimeout(() => (this[l] = false), 3000);
+      this.loader = null;
+    }
+  },
+  methods: {
+    async submit() {
+      this.loader = true;
+      this.loading = true;
+      if (this.$refs.form.validate()) {
+        const data = {
+          id: uuid.v4(),
+          name: this.name,
+          email: this.email,
+          phone: this.phone,
+          subject: this.subject,
+          createdAt: new Date()
+        };
+        this.$refs.form.reset();
+        await API.graphql(graphqlOperation(createContact, { input: data }));
+        this.loading = false;
+        this.alert = true;
+      }
+      this.loader = false;
+      this.loading = false;
+    }
   }
 };
 </script>

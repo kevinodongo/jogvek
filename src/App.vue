@@ -2,7 +2,8 @@
   <v-app>
     <!--Chat section-->
     <v-card width="300" id="chat-section" v-if="chat">
-      <v-toolbar flat dense color="primary" dark>
+      <v-toolbar flat dense color="orange darken-1" dark>
+        <v-icon small class="mr-2">mdi-email-plus</v-icon>
         <div>Contact us</div>
         <v-spacer></v-spacer>
         <v-icon
@@ -20,50 +21,77 @@
         <v-icon @click="chat = false" small>mdi-close</v-icon>
       </v-toolbar>
       <v-divider></v-divider>
+      <v-progress-linear
+        :active="loading"
+        :indeterminate="loading"
+        color="orange"
+      ></v-progress-linear>
       <div v-if="chatForm">
-        <v-card-text>
-          <div class="caption grey--text">
-            For Inquiries, please fill in the form below for a response within
-            one business day. In order to best serve your Support inquiry,
-            please call (+254) 725 999157 or Chat with Technical Support.
-          </div>
-          <v-divider></v-divider>
-          <div class="caption font-weight-bold mb-1 mt-2">Names *</div>
-          <v-text-field
-            name="name"
-            outlined
-            single-line
-            dense
-            hint="Complete the required field"
-            persistent-hint
-            background-color="grey lighten-2"
-          ></v-text-field>
-          <div class="caption font-weight-bold mb-1">Email Address</div>
-          <v-text-field
-            name="name"
-            outlined
-            single-line
-            dense
-            background-color="grey lighten-2"
-          ></v-text-field>
-          <div class="caption font-weight-bold mb-1">Phone Number</div>
-          <v-text-field
-            name="name"
-            outlined
-            single-line
-            dense
-            background-color="grey lighten-2"
-          ></v-text-field>
-        </v-card-text>
-        <v-card-actions class="mb-5">
-          <v-spacer></v-spacer>
-          <v-btn outlined width="100">
-            <span style="text-transform: capitalize">cancel</span>
-          </v-btn>
-          <v-btn color="primary" width="100" class="mr-2">
-            <span style="text-transform: capitalize">submit</span>
-          </v-btn>
-        </v-card-actions>
+        <v-form ref="form" v-model="valid" lazy-validation>
+          <v-card-text>
+            <div class="caption font-weight-bold mb-1 mt-2">Names *</div>
+            <v-text-field
+              name="name"
+              v-model="name"
+              :rules="nameRules"
+              required
+              outlined
+              single-line
+              dense
+              hint="Complete the required field"
+              persistent-hint
+              background-color="grey lighten-2"
+            ></v-text-field>
+            <div class="caption font-weight-bold mb-1">Email Address</div>
+            <v-text-field
+              name="email"
+              v-model="email"
+              :rules="emailRules"
+              required
+              outlined
+              single-line
+              dense
+              background-color="grey lighten-2"
+            ></v-text-field>
+            <div class="caption font-weight-bold mb-1">Phone Number *</div>
+            <v-text-field
+              name="phone"
+              v-model="phone"
+              :rules="phoneRules"
+              required
+              outlined
+              single-line
+              dense
+              background-color="grey lighten-2"
+            ></v-text-field>
+            <div class="caption font-weight-bold mb-1">Subject *</div>
+            <v-textarea
+              v-model="subject"
+              :rules="subjectRules"
+              required
+              background-color="grey lighten-2"
+              single-line
+              outlined
+              name="input-7-4"
+            ></v-textarea>
+          </v-card-text>
+          <v-card-actions class="mb-5">
+            <v-spacer></v-spacer>
+            <v-btn outlined width="100" @click="chat = false">
+              <span style="text-transform: capitalize">cancel</span>
+            </v-btn>
+            <v-btn
+              @click="send"
+              color="orange darken-1"
+              dark
+              :loading="loading"
+              width="100"
+              class="mr-2"
+            >
+              <span style="text-transform: capitalize">submit</span>
+            </v-btn>
+          </v-card-actions>
+        </v-form>
       </div>
     </v-card>
     <!--Button Scroll Up-->
@@ -113,6 +141,9 @@
 </template>
 
 <script>
+import { API, graphqlOperation } from "aws-amplify";
+import { uuid } from "vue-uuid";
+import { createContact } from "./graphql/mutations";
 export default {
   data() {
     return {
@@ -120,8 +151,30 @@ export default {
       chat: false,
       chatForm: true,
       showup: false,
-      showdown: true
+      showdown: true,
+      valid: true,
+      email: "",
+      emailRules: [
+        v => !!v || "E-mail is required",
+        v => /.+@.+\..+/.test(v) || "E-mail must be valid"
+      ],
+      name: "",
+      nameRules: [v => !!v || "Name is required"],
+      subject: "",
+      subjectRules: [v => !!v || "Subject is required"],
+      phone: "",
+      phoneRules: [v => !!v || "Phone is required"],
+      loading: false,
+      loader: null
     };
+  },
+  watch: {
+    loader() {
+      const l = this.loader;
+      this[l] = !this[l];
+      setTimeout(() => (this[l] = false), 3000);
+      this.loader = null;
+    }
   },
   mounted() {
     this.scrollButton();
@@ -143,6 +196,26 @@ export default {
           mybutton.style.display = "none";
         }
       }
+    },
+    async send() {
+      this.loader = true;
+      this.loading = true;
+      if (this.$refs.form.validate()) {
+        const data = {
+          id: uuid.v4(),
+          name: this.name,
+          email: this.email,
+          phone: this.phone,
+          subject: this.subject,
+          createdAt: new Date()
+        };
+        this.$refs.form.reset();
+        await API.graphql(graphqlOperation(createContact, { input: data }));
+        this.loading = false;
+        this.chat = false;
+      }
+      this.loader = false;
+      this.loading = false;
     }
   }
 };
