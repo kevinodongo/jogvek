@@ -1,6 +1,6 @@
 <template>
   <div class="location">
-    <Toolbar />
+    <Toolbar :companyLogo="companyLogo" />
     <v-progress-linear
       :active="loading"
       :indeterminate="loading"
@@ -185,7 +185,8 @@ export default {
       phoneRules: [v => !!v || "Phone is required"],
       loading: false,
       loader: null,
-      timeout: 3000
+      timeout: 3000,
+      companyLogo: ""
     };
   },
   watch: {
@@ -195,6 +196,10 @@ export default {
       setTimeout(() => (this[l] = false), 3000);
       this.loader = null;
     }
+  },
+  mounted() {
+    this.companyLogo =
+      "https://res.cloudinary.com/dk5ch7wqm/image/upload/v1610042479/IMG-20200910-WA0020_ppnudi.jpg";
   },
   methods: {
     async submit() {

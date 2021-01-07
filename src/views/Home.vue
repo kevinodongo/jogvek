@@ -1,52 +1,57 @@
 <template>
   <div class="home">
-    <Toolbar />
-    <v-img
-      height="670"
-      src="https://i.imgur.com/e79U9Io.jpg"
-      alt="home-logo"
-      gradient="to top, rgba(0,0,0,.44), rgba(0,0,0,.44)"
-    >
-      <div class="contact d-none d-sm-flex">
-        <v-container grid-list-xs>
-          <v-card-actions class="pa-2">
-            <v-spacer></v-spacer>
-            <v-icon small class="ml-2">mdi-phone</v-icon>
-            <div class="ml-2 caption font-weight-bold">+254 725 999 157</div>
-            <v-icon small class="ml-2">mdi-email</v-icon>
-            <div class="caption ml-2 font-weight-bold">jogevk@aol.com</div>
-            <v-icon small class="ml-2 mr-2">mdi-clock-outline</v-icon>
-            <div class="caption font-weight-bold">Mon-Fri 7.00 - 5.00</div>
-          </v-card-actions>
-        </v-container>
-      </div>
-      <v-divider></v-divider>
-      <div style="margin-top: 100px;">
-        <v-row justify="center">
-          <v-col cols="11" md="8">
-            <div class="display-3 font-weight-black text-center white--text">
-              <span>ONE COMPANY</span>
-            </div>
-            <div
-              class="display-3 font-weight-black mt-2 text-center white--text"
-            >
-              <span>INFINITE POTENTIAL</span>
-            </div>
-            <div class="headline text-center mt-3 white--text">
-              Cloud Computing Solutions Designed For Your Business
-            </div>
-            <div class="text-center mt-10">
-              <v-btn to="/contact" color="white" large
-                ><v-icon color="orange">mdi-menu-right</v-icon
-                ><span class="orange--text" style="text-transform: capitalize"
-                  >Free Consultation</span
-                ></v-btn
+    <Toolbar :companyLogo="companyLogo" />
+    <v-sheet tile color="#14213d" height="100vh">
+      <v-img
+        height="100vh"
+        :src="homePage"
+        alt="home-logo"
+        transition="slide-x-transition"
+        gradient="to top, rgba(0,0,0,.44), rgba(0,0,0,.44)"
+      >
+        <div class="contact d-none d-sm-flex">
+          <v-container grid-list-xs>
+            <v-card-actions class="pa-2 white--text">
+              <v-spacer></v-spacer>
+              <v-icon small class="ml-2" color="white">mdi-phone</v-icon>
+              <div class="ml-2 caption font-weight-bold">+254 725 999 157</div>
+              <v-icon small class="ml-2" color="white">mdi-email</v-icon>
+              <div class="caption ml-2 font-weight-bold">jogevk@aol.com</div>
+              <v-icon small class="ml-2 mr-2" color="white"
+                >mdi-clock-outline</v-icon
               >
-            </div>
-          </v-col>
-        </v-row>
-      </div>
-    </v-img>
+              <div class="caption font-weight-bold">Mon-Fri 7.00 - 5.00</div>
+            </v-card-actions>
+          </v-container>
+        </div>
+        <v-divider></v-divider>
+        <div style="margin-top: 100px;">
+          <v-row justify="center">
+            <v-col cols="11" md="8">
+              <div class="display-3 font-weight-black text-center white--text">
+                <span>ONE COMPANY</span>
+              </div>
+              <div
+                class="display-3 font-weight-black mt-2 text-center white--text"
+              >
+                <span>INFINITE POTENTIAL</span>
+              </div>
+              <div class="headline text-center mt-3 white--text">
+                Cloud Computing Solutions Designed For Your Business
+              </div>
+              <div class="text-center mt-10">
+                <v-btn to="/contact" color="white" large
+                  ><v-icon color="orange">mdi-menu-right</v-icon
+                  ><span class="orange--text" style="text-transform: capitalize"
+                    >Free Consultation</span
+                  ></v-btn
+                >
+              </div>
+            </v-col>
+          </v-row>
+        </div>
+      </v-img>
+    </v-sheet>
     <Discover />
     <v-img
       src="https://i.imgur.com/jnVYHxH.png"
@@ -118,8 +123,16 @@ export default {
           color: "orange--text"
         }
       ],
+      companyLogo: "",
+      homePage: "",
       expand: false
     };
+  },
+  mounted() {
+    this.homePage =
+      "https://res.cloudinary.com/dk5ch7wqm/image/upload/v1610043264/person-731479_640_fsre9u.jpg";
+    this.companyLogo =
+      "https://res.cloudinary.com/dk5ch7wqm/image/upload/v1610042479/IMG-20200910-WA0020_ppnudi.jpg";
   }
 };
 </script>

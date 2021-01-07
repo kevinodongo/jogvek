@@ -2,18 +2,10 @@
   <div class="toolbar">
     <v-app-bar app color="white">
       <v-col class="d-none d-md-flex" cols="1"></v-col>
-      <img
-        class="d-flex d-sm-none"
-        src="https://i.imgur.com/faH6MrY.png"
-        alt="logo"
-        height="65"
-      />
-      <img
-        class="d-none d-sm-flex"
-        src="https://i.imgur.com/faH6MrY.png"
-        alt="logo"
-        height="100"
-      />
+      <img :src="companyLogo" alt="logo" height="50" />
+      <div class="ml-2 font-weight-bold black--text">
+        JOGEVK GROUP LIMITED
+      </div>
       <v-spacer></v-spacer>
       <v-btn
         text
@@ -80,6 +72,8 @@
 
 <script>
 export default {
+  name: "Header",
+  props: ["companyLogo"],
   data() {
     return {
       expand: false

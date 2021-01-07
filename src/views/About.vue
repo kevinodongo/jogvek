@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <Toolbar />
+    <Toolbar :companyLogo="companyLogo" />
     <v-sheet height="30"></v-sheet>
     <v-container grid-list-xs>
       <v-row class="about">
@@ -43,8 +43,12 @@ export default {
   components: { Toolbar, Footer },
   data() {
     return {
-      //
+      companyLogo: ""
     };
+  },
+  mounted() {
+    this.companyLogo =
+      "https://res.cloudinary.com/dk5ch7wqm/image/upload/v1610042479/IMG-20200910-WA0020_ppnudi.jpg";
   }
 };
 </script>
