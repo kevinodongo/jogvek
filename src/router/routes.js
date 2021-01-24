@@ -1,10 +1,8 @@
-import Home from "../views/Home.vue";
-
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home
+    component: () => import("../views/Home.vue")
   },
   {
     path: "/about",
@@ -53,7 +51,7 @@ const routes = [
     name: "404",
     component: () => import("../components/404.vue")
   },
-  // otherwise
+  //otherwise
   { path: "*", redirect: "/404" }
 ];
 
